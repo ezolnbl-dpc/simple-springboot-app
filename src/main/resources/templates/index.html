@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>New push index site</title>
+</head>
+<body>
+	<h1>Select your CV</h1>
+	<form th:action="@{/cv}" method="post" th:object="${cvData}">
+		<label for="firstname">Firstname:</label> 
+		<input type="text" id="firstname" name="firstname" th:field="*{firstName}" autofocus="autofocus"/><br/>
+		<label for="lastname">Lastname:</label>
+		<input type="text" id="lastname" name="lastname" th:field="*{lastName}"/><br/>
+		<label for="counrty">Country:</label> 
+		<select th:field="*{countryName}">
+  			<option th:each="country : ${allCountries}" th:value="${country.name}" th:text="${country.name}" />
+		</select><br/>
+		<label for="date">Date:</label> 
+		<input type="date" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" th:field="*{date}"/><br/>
+		<input type="submit" value="Select"/>
+	</form>
+</body>
+</html>

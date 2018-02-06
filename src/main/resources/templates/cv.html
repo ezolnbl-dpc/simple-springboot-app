@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>New push CV site</title>
+</head>
+<body>
+	<h1>Your CV is here with:</h1>
+	<p th:text="'selected firstName: ' + ${cvData.firstName}"></p>
+	<p th:text="'selected lastName: ' + ${cvData.lastName}"></p>
+	<p th:text="'selected countryName: ' + ${cvData.countryName}"></p>
+	<p th:text="'selected date: ' + ${cvData.date}"></p>
+	<p th:text="'saved content: ' + ${savedCv}"></p>
+<div>
+	<a href="indexPage" th:href="@{/index}">Back To CV Selector</a>
+</div>
+</body>
+</html>

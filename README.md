@@ -1,4 +1,17 @@
-# newpush readme
+Spring Boot Test App
+- Create a Spring Boot application (runnable jar, Java 9):
+- Build with Gradle,
+- Create two html pages:
+- Index page with input fields
+- first name (text),
+- last name (text),
+- country (drop down),
+- date (date picker),
+- submit button: On submit, show the CV page;
+- CV page: showing the candidate's CV file or inline HTML5;
+- At the top of the page, display the data from the form,
+- No validation is required.
+
 nálam java8 volt telepítve így ha command line szeretnénk futtatni akkor ezzel a paranccsal lehet, amennyiben nem 8as java van telepítve:
 ./gradlew cle bootRun -i -Dorg.gradle.java.home="PATH_TO_JDK"
 
